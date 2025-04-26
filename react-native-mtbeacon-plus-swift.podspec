@@ -16,7 +16,6 @@ Pod::Spec.new do |s|
 
   s.source_files = "ios/**/*.{swift}"
   s.vendored_frameworks = "ios/MTBeaconPlus.framework", "ios/iOSDFULibrary.framework", "ios/ZIPFoundation.framework"
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.1' }
 
   s.script_phase = {
     :name => 'Copy frameworks before compile',
