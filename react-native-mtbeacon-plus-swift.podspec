@@ -9,8 +9,7 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://github.com/rtsdeveloper/rn-mtbeaconplus"
   s.license      = "MIT"
-  # s.license    = { :type => "MIT", :file => "FILE_LICENSE" }
-  s.authors      = { "RTS-Developer" => "sharmaritesh9794@gmail.com" }
+  s.authors      = { "RTS-Dev" => "sharmaritesh9794@gmail.com" }
   s.platforms    = { :ios => "9.0" }
   s.source       = { :git => "https://github.com/rtsdeveloper/rn-mtbeaconplus.git", :tag => "#{s.version}" }
 
@@ -22,6 +21,12 @@ Pod::Spec.new do |s|
     :script => '${PODS_TARGET_SRCROOT}/ios/frameworks/archs.sh',
     :execution_position => :before_compile
   }
-  
-end
 
+  # ➔ Add this part
+  s.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 x86_64'
+  }
+  s.user_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 x86_64'
+  }
+end
