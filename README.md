@@ -109,7 +109,7 @@ export default BeaconScanner;
 - Verify that the native module is properly linked and compiled.
 ## Authors
 
-- [RTS-Developer](https://github.com/rtsdeveloper/rn-mtbeaconplus)
+- [RTS-Dev](https://github.com/rtsdeveloper/rn-mtbeaconplus)
 
 
 ## Contributing
